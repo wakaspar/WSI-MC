@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Williams-Sonoma Markup Challenge by Will Kaspar</title>
+  	<link rel="stylesheet" href="main.css">
+  </head>
+ 
+  <body> 	
+  	<!-- Logo Container -->
+  	<div class="logo-box">
+  	  <img class="ws-logo" src="assets/logo.png">
+  	  <br>
+  	</div>
+
+  	<!-- NAVIGATION -->
+  	<!-- Menu - TODO: hoverables currently broken, don't cover whole div on hover.  need to look at CSS classes to fix it. -->
+  	<nav>
+	  <ul>
+  	  	<li>
+  	      <a href="https://www.williams-sonoma.com/shop/cookware/" target="_blank">COOKWARE</a>
+  	  	</a>
+  	  	<li>
+  		  <a href="https://www.williams-sonoma.com/shop/cooks-tools/">COOKS' TOOLS</a>
+  	  	</li>
+  	  	<li>
+  		  <a href="">CUTLERY</a>
+      	</li>
+  		<li>
+  		  <a href="">ELECTRICS</a>
+  		</li>
+  		<li>
+  		  <a href="">BAKEWARE</a>
+  		</li>
+  		<li>
+  		  <a href="">FOOD</a>
+  		</li>
+  		<li>
+  		  <a href="">TABLETOP & BAR</a>
+  		</li>
+  		<li>
+  		  <a href="">HOMEKEEPING</a>
+  		</li>
+  		<li>
+  		  <a href="">OUTDOOR</a>
+  		</li>
+  		<li>
+  		  <a href="">SALE</a>
+  		</li>
+  		<li class="ws-home-button">
+  	      <a class="" href="">WILLIAMS-SONOMA HOME</a>
+  	    </li>
+	  </ul>
+	</nav>
+	<!-- Breadcrumbs - NOTE: consider switching to using CSS::after to eliminate the repeated <p> tags. -->
+	<div class="breadcrumbs">
+	  <a class="crumb" href="">Home</a>
+	  <a class="crumb" href="">Homekeeping</a>
+	  <a class="crumb" href="">Aprons</a>
+	  <a class="crumb" href="">Adult Aprons</a>
+	  <a class="active" href="">Williams-Sonoma Classic Apron, French Blue</a>
+	</div>
+
+	<!-- PAGE CONTENT -->
+	<div class="w3-container product-panel">
+		<!-- Product Image Panel - Displays a product and any variations wherein -->
+		<div class="product-image-panel">	
+		  <br>
+		  <img src="assets/product-large-a.jpg">
+		  <div class="variation-row">
+		  	<img class="active" src="assets/product-small-a.jpg">
+		  	<img src="assets/product-small-b.jpg">
+		  	<img src="assets/product-small-c.jpg">
+		  	<img src="assets/product-small-d.jpg">
+		  </div>
+		</div>
+
+		<!-- Info Panel - Gives the user information about a product -->
+		<div class="product-info-panel">
+		  <h3 class="product-name">Williams-Sonoma Classic Apron, French Blue</h3>
+		  <p>
+			  A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color.  Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of color.  An Apron of this quality makes a welcome gift for any cook.
+		  </p>
+		  <div class="product-info">		
+			<!-- TODO: this list needs to be indented to be under the description.  padding?  margins? -->
+		    <ul>
+			  <li>Durable 100% cotton construction.</li>
+			  <li>Adjustable neckband ensures a good fit.</li>
+			  <li>Roomy front pockets hold small tools.</li>
+			  <li>Machine-wash.</li>
+			</ul>
+
+			<h3 class="price">$19.95</h3>
+			  <input type="number" name="quantity" value="1">
+			  <button class="add-to-cart">
+				<img src="assets/button-add-to-cart.png">
+			  </button>
+		  </div>
+
+		  <div class="expandable-collapsable"></div>
+		    <div class="expanded">
+		  	  <span>
+		  	    <img src="assets/arrow-expanded.png">
+		  	    <h3>EXPANDED</h3>
+		  	  </span>
+		  	  <p>
+		  	  	This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.  This section can be collapsed by clicking the "Expanded."  There were originally typos in this part of the markup challenge, claiming that this section was, "exanded."  This has been fixed, as it is not a thing.
+		  	  </p>
+		    </div>
+		    <hr style="border: 0.5px solid lightgrey;">
+		    <div class="collapsed">
+		  	  <span>
+		  	    <img src="assets/arrow-collapsed.png">
+		  	    <h3>COLLAPSED</h3>
+		  	  </span>
+		    </div>
+		    <hr style="border: 0.5px solid lightgrey;">
+		    <div class="collapsed">
+		  	  <span>
+		  	    <img src="assets/arrow-collapsed.png">
+		  	    <h3>COLLAPSED</h3>
+		  	  </span>
+		    </div>
+		  </div>
+		</div> <!-- closes info-panel -->
+	</div>	
+
+
+
+
+	<footer>
+	  <p>© 2018 Williams-Sonoma Inc.  All Rights Reserved | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#terms" target="_blank">Terms and Conditions</a> <span style="color:red;">(Updated March 2016)</span> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#privacy" target="_blank">Privacy Policy</a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#legal" target="_blank">Legal Statement</a></p>
+	</footer>
+
+  </body>
+</html>
