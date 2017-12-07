@@ -36,22 +36,23 @@ footer a:hover, .breadcrumbs a:hover {
 
 /* Navigation CSS */
 nav {
+	white-space: nowrap;
 	width: 100vw;
 }
 
 nav ul {
+	margin: auto;
+	padding: 0;
 	list-style-type: none;
 }
 
 nav ul li, .ws-home-button {
 	background-color: #2d2d2d;
-	/*padding: 1% 1.75%;*/
 }
 
 nav ul li a, .ws-home-button a, .ws-menu a {
-	/*font-size: .7em;*/
-	font-size: 1.6vw;
-	font-weight: 500;
+	font-size: 1.3vw;
+	/*font-weight: 500;*/
 	color: #ffffff;
 }
 
@@ -112,7 +113,6 @@ p.hover {
 .product-info-panel {
 	margin: 1%;
 	padding: 1%	;
-	width: auto;
 }
 
 .product-info-panel, .price {
@@ -161,4 +161,16 @@ footer {
 
 footer p, footer a {
 	color: black;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (min-width: 900px) {
+	nav ul li a, .ws-home-button a, .ws-menu a {
+		font-size: .7em;
+		font-weight: 500;
+	}
+	nav ul li, .ws-home-button {
+		padding: 1vw 1vw;
+	}
 }
