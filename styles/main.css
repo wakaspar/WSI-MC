@@ -45,11 +45,12 @@ nav ul {
 
 nav ul li, .ws-home-button {
 	background-color: #2d2d2d;
-	/*padding: 1% 1%;*/
+	/*padding: 1% 1.75%;*/
 }
 
 nav ul li a, .ws-home-button a, .ws-menu a {
-	font-size: .5em;
+	/*font-size: .7em;*/
+	font-size: 1.6vw;
 	font-weight: 500;
 	color: #ffffff;
 }
@@ -95,9 +96,13 @@ p.hover {
 }
 
 .product-image-panel {
+	max-width: 50%;
 	margin: 1%;
 	padding: 1%;
 	float: left;
+}
+.product-image-panel img {
+	max-width: 90%;
 }
 
 .variation-row .active {
@@ -137,7 +142,8 @@ input {
 }
 
 .expandable-collapsable {
-
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 
