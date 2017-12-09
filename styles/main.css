@@ -4,9 +4,15 @@ the same directory.  To open the page, just drag index.html to your
 browser window. */
 
 
+/**************************/
 /* Fonts & Cross-Body CSS */
+/**************************/
+* {
+	border: 2px solid lime;
+}
+
 nav ul li a, .ws-home-button a, .breadcrumbs a,
-.product-info-panel, .price, footer {
+.product-info, .price, footer {
 	font-family: 'Arial', sans-serif;
 }
 
@@ -28,21 +34,23 @@ footer a:hover, .breadcrumbs a:hover {
 }
 
 
+/**********************/
 /* Logo Container CSS */
+/**********************/
 .ws-logo {
 	margin: auto;
 }
 
 
+/******************/
 /* Navigation CSS */
+/******************/
 nav {
-	white-space: nowrap;
-	width: 100vw;
+/*	white-space: nowrap;
+	width: 100vw;*/
 }
 
 nav ul {
-	margin: auto;
-	padding: 0;
 	list-style-type: none;
 }
 
@@ -52,7 +60,6 @@ nav ul li, .ws-home-button {
 
 nav ul li a, .ws-home-button a, .ws-menu a {
 	font-size: 1.3vw;
-	/*font-weight: 500;*/
 	color: #ffffff;
 }
 
@@ -89,37 +96,43 @@ p.hover {
 	color: black;
 }
 
-
+/********************/
 /* Page Content CSS */
-.product-panel {
-	width: 90vw;
-	margin: auto;
+/********************/
+.product-container {
+	width: 100%;
+	margin: 0 2%;
 }
 
-.product-image-panel {
-	max-width: 50%;
-	margin: 1%;
-	padding: 1%;
+.panel {
 	float: left;
+	width: 40%;
+	margin: 0 auto;
 }
-.product-image-panel img {
-	max-width: 90%;
+
+.product-container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.product-image {
+	/*max-width: 40%;*/
 }
 
 .variation-row .active {
 	border: 2px solid black;
 }
 
-.product-info-panel {
-	margin: 1%;
-	padding: 1%	;
+.product-info {
+	/*max-width: 40%;*/
 }
 
-.product-info-panel, .price {
+.product-info, .price {
 	font-weight: normal;
 }
 
-.product-info-panel p, .product-info-panel li {
+.product-info p, .product-info li {
 	font-size: .75em;
 }
 
@@ -138,7 +151,7 @@ input {
 .add-to-cart {
 	padding: 25px 0px;
 	background: none;
-  border: none;
+  	border: none;
 }
 
 .expandable-collapsable {
@@ -146,8 +159,9 @@ input {
 	border-bottom: 1px solid black;
 }
 
-
+/**************/
 /* Footer CSS */
+/**************/
 footer {
 	display: block;
 	font-size: 0.75em;
@@ -172,5 +186,8 @@ footer p, footer a {
 	}
 	nav ul li, .ws-home-button {
 		padding: 1vw 1vw;
+	}
+	nav ul {
+		margin: 0 auto;
 	}
 }
