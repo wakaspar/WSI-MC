@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Williams-Sonoma Markup Challenge by Will Kaspar</title>
-    <!-- <link rel="stylesheet" href="vendor/normalize.css"> -->
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="scripts/app.js"></script>
 
   </head>
@@ -24,86 +24,83 @@
 	     <ul>
   	     <li class="">
   	      <a class="hoverable" href="https://www.williams-sonoma.com/shop/cookware/" target="_blank">COOKWARE</a>
-          <p class="hover">COOKWARE</p>
   	  	</a>
   	  	<li class="hoverable">
   		    <a href="https://www.williams-sonoma.com/shop/cooks-tools/" target="_blank">COOKS' TOOLS</a>
   	  	</li>
   	  	<li class="hoverable">
-  		    <a href="">CUTLERY</a>
+  		    <a href="https://www.williams-sonoma.com/shop/cutlery/" target="_blank">CUTLERY</a>
       	</li>
   		  <li>
-  		    <a href="">ELECTRICS</a>
+  		    <a href="https://www.williams-sonoma.com/shop/electrics/" target="_blank">ELECTRICS</a>
   		  </li>
   		  <li>
-  		    <a href="">BAKEWARE</a>
+  		    <a href="https://www.williams-sonoma.com/shop/bakeware/" target="_blank">BAKEWARE</a>
   		  </li>
     		<li>
-    		  <a href="">FOOD</a>
+    		  <a href="https://www.williams-sonoma.com/shop/food/" target="_blank">FOOD</a>
     		</li>
     		<li>
-    		  <a href="">TABLETOP & BAR</a>
+    		  <a href="https://www.williams-sonoma.com/shop/tabletop-and-bar/" target="_blank">TABLETOP & BAR</a>
     		</li>
     		<li>
-    		  <a href="">HOMEKEEPING</a>
+    		  <a href="https://www.williams-sonoma.com/shop/homekeeping/" target="_blank">HOMEKEEPING</a>
     		</li>
     		<li>
-    		  <a href="">OUTDOOR</a>
+    		  <a href="https://www.williams-sonoma.com/shop/outdoor/" target="_blank">OUTDOOR</a>
     		</li>
     		<li>
-    		  <a href="">SALE</a>
+    		  <a href="https://www.williams-sonoma.com/shop/sale/" target="_blank">SALE</a>
     		</li>
         <li class="ws-home-button">
-    	    <a class="" href="">WILLIAMS-SONOMA HOME</a>
+    	    <a class="" href="https://www.williams-sonoma.com/" target="_blank">WILLIAMS-SONOMA HOME</a>
         </li>
+        <div class="breadcrumbs">
+          <a class="crumb" href="">Home</a>
+          <a class="crumb" href="">Homekeeping</a>
+          <a class="crumb" href="">Aprons</a>
+          <a class="crumb" href="">Adult Aprons</a>
+          <a class="active" href="">Williams-Sonoma Classic Apron, French Blue</a>
+        </div>
       </ul>
     </nav>
-  	<!-- Breadcrumbs - NOTE: consider switching to using CSS::after to eliminate the repeated <p> tags. -->
-  	<div class="breadcrumbs">
-  	  <a class="crumb" href="">Home</a>
-  	  <a class="crumb" href="">Homekeeping</a>
-  	  <a class="crumb" href="">Aprons</a>
-  	  <a class="crumb" href="">Adult Aprons</a>
-  	  <a class="active" href="">Williams-Sonoma Classic Apron, French Blue</a>
-  	</div>
 
   	<!-- PAGE CONTENT -->
   	<div class="product-container">
-  		
-      <!-- Product Image Panel - Displays a product and any variations wherein -->
-  		<div class="product-image panel">
+      <!-- Image Panel - Shows the user various images of a product -->
+      <div class="product-image">
   		  <br>
-  		  <img src="assets/product-large-a.jpg">
-  		  <div class="variation-row">
-  		  	<img class="active" src="assets/product-small-a.jpg">
-  		  	<img src="assets/product-small-b.jpg">
-  		  	<img src="assets/product-small-c.jpg">
-  		  	<img src="assets/product-small-d.jpg">
+        <img id="hero image" src="assets/product-large-a.jpg">
+  		  <div class="sidekick-row">
+          <img class="sidekick active" src="assets/product-small-a.jpg">
+          <img class="sidekick" src="assets/product-small-b.jpg">
+          <img class="sidekick" src="assets/product-small-c.jpg">
+          <img class="sidekick" src="assets/product-small-d.jpg">
   		  </div>
   		</div>
-
   		<!-- Info Panel - Gives the user information about a product -->
-  		<div class="product-info panel">
+  		<div class="product-info">
   		  <h3 class="product-name">Williams-Sonoma Classic Apron, French Blue</h3>
   		  <p>
   			  A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color.  Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of color.  An Apron of this quality makes a welcome gift for any cook.
   		  </p>
-  		  <div class="product-info">
-  			<!-- TODO: this list needs to be indented to be under the description.  padding?  margins? -->
-  		    <ul>
-            <li>Durable 100% cotton construction.</li>
-            <li>Adjustable neckband ensures a good fit.</li>
-            <li>Roomy front pockets hold small tools.</li>
-            <li>Machine-wash.</li>
-  			  </ul>
+        <ul>
+          <li>Durable 100% cotton construction.</li>
+          <li>Adjustable neckband ensures a good fit.</li>
+          <li>Roomy front pockets hold small tools.</li>
+          <li>Machine-wash.</li>
+        </ul>
+        <div class="price-quantity-add">
           <h3 class="price">$19.95</h3>
           <input type="number" name="quantity" value="1">
-          <!-- TODO: Make this button sing! -->
-          <a href="" class="add-to-cart">
+          <!-- TODO: It sings a little, now meet the reqs! -->
+          <a id="add-to-cart">
             <img src="assets/button-add-to-cart.png">
           </a>
-  		  </div>
-  		  <div class="expandable-collapsable">
+        </div>
+
+
+        <div class="expandable-collapsable">
           <div class="expanded">
             <span>
               <img src="assets/arrow-expanded.png">

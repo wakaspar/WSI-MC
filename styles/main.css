@@ -4,11 +4,24 @@ the same directory.  To open the page, just drag index.html to your
 browser window. */
 
 
-/**************************/
-/* Fonts & Cross-Body CSS */
-/**************************/
+/*********************************/
+/* Logo, Fonts, & Cross-Body CSS */
+/*********************************/
 * {
-	border: 2px solid lime;
+	box-sizing: border-box;
+	/*border: 2px solid lime;*/
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.ws-logo {
+	margin: auto;
 }
 
 nav ul li a, .ws-home-button a, .breadcrumbs a,
@@ -16,17 +29,13 @@ nav ul li a, .ws-home-button a, .breadcrumbs a,
 	font-family: 'Arial', sans-serif;
 }
 
-nav ul li, .breadcrumbs a, .expanded h3,
-.collapsed h3, .ws-home-button {
-	display: inline;
-}
-
-.ws-logo, .add-to-cart {
+.ws-logo, #add-to-cart {
 	display: block;
 }
 
-a {
-	text-decoration: none;
+.sidekick, .breadcrumbs a, .expanded h3,
+.collapsed h3, .ws-home-button {
+	display: inline;
 }
 
 footer a:hover, .breadcrumbs a:hover {
@@ -34,28 +43,24 @@ footer a:hover, .breadcrumbs a:hover {
 }
 
 
-/**********************/
-/* Logo Container CSS */
-/**********************/
-.ws-logo {
-	margin: auto;
-}
-
-
-/******************/
-/* Navigation CSS */
-/******************/
+/***********************/
+/* Menu Navigation CSS */
+/***********************/
 nav {
-/*	white-space: nowrap;
-	width: 100vw;*/
+  text-align: center;
 }
 
 nav ul {
 	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 nav ul li, .ws-home-button {
 	background-color: #2d2d2d;
+	display: inline-block;
+	margin: 0px -2px;
+	padding: .75vw;
 }
 
 nav ul li a, .ws-home-button a, .ws-menu a {
@@ -64,7 +69,7 @@ nav ul li a, .ws-home-button a, .ws-menu a {
 }
 
 .ws-home-button {
-	border: 2px #ffffff solid;
+	margin: 0px;
 	background-color: #2b315b;
 }
 
@@ -78,13 +83,15 @@ nav ul li:hover a {
 	font-weight: 500;
 }
 
-p.hover {
-	display: none;
+.breadcrumbs {
+	text-align: center;
+	margin-right: 31.75%;
 }
 
 .breadcrumbs a {
 	color: lightgrey;
-	font-size: .5em;
+	font-size: .75em;
+	padding-right: 10px;
 }
 
 .crumb::after {
@@ -100,32 +107,25 @@ p.hover {
 /* Page Content CSS */
 /********************/
 .product-container {
-	width: 100%;
-	margin: 0 2%;
 }
 
-.panel {
-	float: left;
-	width: 40%;
-	margin: 0 auto;
-}
-
-.product-container:after {
-	content: "";
-	display: table;
-	clear: both;
+.product-image, .product-info {
+	width: auto;
+	display: inline-table;
 }
 
 .product-image {
-	/*max-width: 40%;*/
+	text-align: center;
 }
 
-.variation-row .active {
+.sidekick {
+	height: 90px;
+	width: 90px;
+}
+
+
+.sidekick-row .active {
 	border: 2px solid black;
-}
-
-.product-info {
-	/*max-width: 40%;*/
 }
 
 .product-info, .price {
@@ -148,10 +148,10 @@ input {
 	width: 50px;
 }
 
-.add-to-cart {
+#add-to-cart {
 	padding: 25px 0px;
 	background: none;
-  	border: none;
+  border: none;
 }
 
 .expandable-collapsable {
@@ -177,17 +177,20 @@ footer p, footer a {
 	color: black;
 }
 
-
+/************************************/
 /* Media Queries for Responsiveness */
+/************************************/
+/* NOTE: Caps fonts size for menu @ .7em on screens > 900px */
 @media (min-width: 900px) {
 	nav ul li a, .ws-home-button a, .ws-menu a {
 		font-size: .7em;
 		font-weight: 500;
 	}
-	nav ul li, .ws-home-button {
-		padding: 1vw 1vw;
-	}
-	nav ul {
-		margin: 0 auto;
+}
+
+/* NOTE: Ensures content renders in two columns on screens > 920px */
+@media (min-width: 920px) {
+	.product-image, .product-info {
+		width: 45%;
 	}
 }
