@@ -33,7 +33,7 @@ nav ul li a, .ws-home-button a, .breadcrumbs a,
 	display: block;
 }
 
-.sidekick, .breadcrumbs a, .expanded h3,
+.sidekick, .breadcrumbs .active, .crumb, .expanded h3,
 .collapsed h3, .ws-home-button {
 	display: inline;
 }
@@ -85,21 +85,21 @@ nav ul li:hover a {
 
 .breadcrumbs {
 	text-align: center;
-	margin-right: 31.75%;
+	margin-right: 38%;
 }
 
 .breadcrumbs a {
 	color: lightgrey;
 	font-size: .75em;
-	padding-right: 10px;
 }
 
 .crumb::after {
 	content: ' > ';
 	color: lightgrey;
+	font-size: .75em;
 }
 
-.breadcrumbs .active {
+.breadcrumbs .active a {
 	color: black;
 }
 
