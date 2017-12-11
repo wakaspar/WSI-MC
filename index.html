@@ -18,8 +18,7 @@
   	  <br>
     </div>
 
-    <!-- NAVIGATION -->
-  	<!-- Menu - TODO: hoverables currently broken, don't cover whole div on hover.  need to look at CSS classes to fix it. -->
+    <!-- Navigation -->
     <nav>
 	     <ul>
   	     <li class="">
@@ -41,7 +40,7 @@
     		  <a href="https://www.williams-sonoma.com/shop/food/" target="_blank">FOOD</a>
     		</li>
     		<li>
-    		  <a href="https://www.williams-sonoma.com/shop/tabletop-and-bar/" target="_blank">TABLETOP & BAR</a>
+    		  <a href="https://www.williams-sonoma.com/shop/tabletop-glassware-bar/" target="_blank">TABLETOP & BAR</a>
     		</li>
     		<li>
     		  <a href="https://www.williams-sonoma.com/shop/homekeeping/" target="_blank">HOMEKEEPING</a>
@@ -50,23 +49,23 @@
     		  <a href="https://www.williams-sonoma.com/shop/outdoor/" target="_blank">OUTDOOR</a>
     		</li>
     		<li>
-    		  <a href="https://www.williams-sonoma.com/shop/sale/" target="_blank">SALE</a>
+    		  <a href="https://www.williams-sonoma.com/shop/sale-special-offer/" target="_blank">SALE</a>
     		</li>
         <li class="ws-home-button">
     	    <a class="" href="https://www.williams-sonoma.com/" target="_blank">WILLIAMS-SONOMA HOME</a>
         </li>
         <div class="breadcrumbs">
           <div class="crumb">
-            <a class="" href="">Home</a>
+            <a class="" href="https://www.williams-sonoma.com/" target="_blank">Home</a>
           </div>
           <div class="crumb">
-            <a class="" href="">Homekeeping</a>
+            <a class="" href="https://www.williams-sonoma.com/shop/homekeeping/" target="_blank">Homekeeping</a>
           </div>
           <div class="crumb">
-            <a class="" href="">Aprons</a>
+            <a class="" href="https://www.williams-sonoma.com/shop/homekeeping/homekeeping-aprons" target="_blank">Aprons</a>
           </div>
           <div class="crumb">
-            <a class="" href="">Adult Aprons</a>
+            <a class="" href="https://www.williams-sonoma.com/shop/homekeeping/homekeeping-aprons/adult-aprons/" target="_blank">Adult Aprons</a>
           </div>
           <div class="active">
             <a class="" href="">Williams-Sonoma Classic Apron, French Blue</a>
@@ -75,71 +74,87 @@
       </ul>
     </nav>
 
-  	<!-- PAGE CONTENT -->
-  	<div class="product-container">
-      <!-- Image Panel - Shows the user various images of a product -->
-      <div class="product-image">
-  		  <br>
-        <img id="hero image" src="assets/product-large-a.jpg">
-  		  <div class="sidekick-row">
-          <img class="sidekick active" src="assets/product-small-a.jpg">
-          <img class="sidekick" src="assets/product-small-b.jpg">
-          <img class="sidekick" src="assets/product-small-c.jpg">
-          <img class="sidekick" src="assets/product-small-d.jpg">
-  		  </div>
-  		</div>
-  		<!-- Info Panel - Gives the user information about a product -->
-  		<div class="product-info">
-  		  <h3 class="product-name">Williams-Sonoma Classic Apron, French Blue</h3>
-  		  <p>
-  			  A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color.  Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of color.  An Apron of this quality makes a welcome gift for any cook.
-  		  </p>
-        <ul>
-          <li>Durable 100% cotton construction.</li>
-          <li>Adjustable neckband ensures a good fit.</li>
-          <li>Roomy front pockets hold small tools.</li>
-          <li>Machine-wash.</li>
-        </ul>
-        <div class="price-quantity-add">
-          <h3 class="price">$19.95</h3>
-          <input type="number" name="quantity" value="1">
-          <!-- TODO: It sings a little, now meet the reqs! -->
-          <a id="add-to-cart">
-            <img src="assets/button-add-to-cart.png">
-          </a>
+  	<!-- Page Content -->
+    <!-- Image Panel: Shows the user various images of a product -->
+    <div class="product-image">
+		  <br>
+      <img id="hero" src="assets/product-large-a.jpg">
+		  <div class="sidekick-row">
+        <img class="sidekick active" src="assets/product-small-a.jpg" hero="assets/product-large-a.jpg">
+        <img class="sidekick" src="assets/product-small-b.jpg" hero="assets/product-large-b.jpg">
+        <img class="sidekick" src="assets/product-small-c.jpg" hero="assets/product-large-c.jpg">
+        <img class="sidekick" src="assets/product-small-d.jpg" hero="assets/product-large-d.jpg">
+		  </div>
+		</div>
+		<!-- Info Panel: Gives the user information about a product -->
+		<div class="product-info">
+      <h3 class="product-name">Williams-Sonoma Classic Apron, French Blue</h3>
+		  <p>
+			  A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color.  Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of color.  An Apron of this quality makes a welcome gift for any cook.
+		  </p>
+      <ul>
+        <li>Durable 100% cotton construction.</li>
+        <li>Adjustable neckband ensures a good fit.</li>
+        <li>Roomy front pockets hold small tools.</li>
+        <li>Machine-wash.</li>
+      </ul>
+      <!-- Price, Quantity Input, and Add-To-Cart Button -->
+      <div class="price-quantity-add">
+        <h3 class="price">$19.95</h3>
+        <input id="quantity" type="number" name="quantity" value="1">
+        <a id="add-to-cart">
+          <img src="assets/button-add-to-cart.png">
+          <p class="items-added"></p>
+        </a>
+      </div>
+      <!-- Expandable - Collapsable -->
+      <div id="accordion">
+        <div class="acc-box">
+          <span>
+            <img src="assets/arrow-expanded.png">
+            <h3>EXPANDED</h3>
+          </span>
+          <p>
+            This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.  This section can be collapsed by clicking the "Expanded."  There were originally typos in this part of the markup challenge, claiming that this section was, "exanded."  This has been fixed, as it is not a thing.
+          </p>
         </div>
-
-
-        <div class="expandable-collapsable">
-          <div class="expanded">
-            <span>
-              <img src="assets/arrow-expanded.png">
-              <h3>EXPANDED</h3>
-            </span>
-  		  	  <p>
-  		  	  	This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.  This section can be collapsed by clicking the "Expanded."  There were originally typos in this part of the markup challenge, claiming that this section was, "exanded."  This has been fixed, as it is not a thing.
-  		  	  </p>
-  		    </div>
-  		    <hr style="border: 0.5px solid lightgrey;">
-  		    <div class="collapsed">
-  		  	  <span>
-  		  	    <img src="assets/arrow-collapsed.png">
-  		  	    <h3>COLLAPSED</h3>
-  		  	  </span>
-  		    </div>
-  		    <hr style="border: 0.5px solid lightgrey;">
-  		    <div class="collapsed">
-  		  	  <span>
-  		  	    <img src="assets/arrow-collapsed.png">
-  		  	    <h3>COLLAPSED</h3>
-  		  	  </span>
-  		    </div>
-  		  </div>
-  		</div> <!-- closes info-panel -->
+        <hr>
+        <div class="acc-box">
+          <span>
+            <img src="assets/arrow-collapsed.png">
+            <h3>COLLAPSED</h3>
+          </span>
+          <p style="display:none;">
+            This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.  This section can be collapsed by clicking the "Expanded."  There were originally typos in this part of the markup challenge, claiming that this section was, "exanded."  This has been fixed, as it is not a thing.
+          </p>
+        </div>
+        <hr>
+        <div class="acc-box">
+          <span>
+            <img src="assets/arrow-collapsed.png">
+            <h3>COLLAPSED</h3>
+          </span>
+          <p style="display:none;">
+            This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.  This section can be collapsed by clicking the "Expanded."  There were originally typos in this part of the markup challenge, claiming that this section was, "exanded."  This has been fixed, as it is not a thing.
+          </p>
+        </div>
+		  </div>
+      <br>
   	</div>
 
+    <div class="modal-overlay"></div>
+
+    <div class="add-to-cart-modal">
+      <h1 class="modal-greeting">Thank you!</h1>
+      <h3 class="items-added"></h3>
+      <hr>
+      <div id="button-close-modal" type="button" name="button">
+        <a>x</a>
+      </div>
+    </div>
+
   	<footer>
-  	  <p>© 2018 Williams-Sonoma Inc.  All Rights Reserved | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#terms" target="_blank">Terms and Conditions</a> <span style="color:red;">(Updated March 2016)</span> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#privacy" target="_blank">Privacy Policy</a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#legal" target="_blank">Legal Statement</a></p>
+  	  <p>© 2018 Williams-Sonoma Inc.  All Rights Reserved | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#terms" target="_blank">Terms and Conditions</a> <span style="color:#ff0000;">(Updated March 2016)</span> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#privacy" target="_blank">Privacy Policy</a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#legal" target="_blank">Legal Statement</a></p>
     </footer>
   </body>
 </html>
